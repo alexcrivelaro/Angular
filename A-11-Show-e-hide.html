@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Show e hide</title>
+        <script type="text/javascript" src="angular.min.js"></script>
+        <style>
+            p, h1, h2, h3 {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            body {
+                background-color: #d2f0cd;
+            }
+        </style>
+    </head>
+    <body ng-app="meuApp" ng-controller="meuCtrl">
+        <h1>Página do curso de AngularJS.</h1>
+        <h2>Show e hide.</h2>
+        <h3>Comandos para mostrar e esconder valores.</h3>
+        
+        <h2>Restaurante</h2> 
+        
+        <p ng-show="hora > 17">Estamos aberto agora às {{hora}}h.</p>
+
+        <script type="text/javascript">
+        var app = angular.module('meuApp', []);
+        app.controller('meuCtrl', function($scope){
+
+            $scope.hora = 20;
+
+        });
+        </script>
+    </body>
+</html>
