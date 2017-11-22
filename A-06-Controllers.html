@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Controllers</title>
+        <script type="text/javascript" src="angular.min.js"></script>
+        <style>
+            p, h1, h2, h3 {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            body {
+                background-color: #d2f0cd;
+            }
+        </style>
+    </head>
+    <body ng-app="meuApp" ng-controller="meuCtrl">
+        <h1>Página do curso de AngularJS.</h1>
+        <h2>Controllers</h2>
+        <h3>Conceitos de controllers.</h3>
+        
+        <p>Ao carregar uma aplicação é possível iniciar com valores.</p><br>
+        Nome: <input type="text" ng-model="primeiroNome" /><br/><br>
+        Sobrenome: <input type="text" ng-model="segundoNome" /><br/>
+        <br/>
+        Olá {{ primeiroNome + " " + segundoNome }}!
+
+        <script type="text/javascript">
+        var app = angular.module('meuApp', []);
+        app.controller('meuCtrl', function($scope){
+            $scope.primeiroNome = "Fulano";
+            $scope.segundoNome = "de Tal";
+        });
+        </script>
+    </body>
+</html>
