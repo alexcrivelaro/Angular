@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Repeat - repetidores</title>
+        <script type="text/javascript" src="angular.min.js"></script>
+        <style>
+            p, h1, h2, h3 {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            body {
+                background-color: #d2f0cd;
+            }
+        </style>
+    </head>
+    <body ng-app="meuApp" ng-controller="meuCtrl">
+        <h1>Página do curso de AngularJS.</h1>
+        <h2>Repeat - repetidores</h2>
+        <h3>Conceitos de Repeat - repetidores.</h3>
+        
+        <h2>Receita de bolo</h2> 
+        <ul>
+            <li ng-repeat="ing in ingredientes">
+                {{ing.qt}} de {{ing.nome}}
+            </li>
+        </ul>
+
+        <script type="text/javascript">
+        var app = angular.module('meuApp', []);
+        app.controller('meuCtrl', function($scope){
+            
+            $scope.ingredientes = [
+                {'nome':'farinha', 'qt':'200g'},
+                {'nome':'ovo', 'qt':'3 un.'},
+                {'nome':'chocolate', 'qt':'500g'},
+            ];
+
+        });
+        </script>
+
+
+
+    </body>
+</html>
