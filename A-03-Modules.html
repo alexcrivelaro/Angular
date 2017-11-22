@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Módulos - (modules)</title>
+        <script type="text/javascript" src="angular.min.js"></script>
+        <style>
+            p, h1, h2 {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            body {
+                background-color: #d2f0cd;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Página do curso de AngularJS.</h1>
+        <h2>Módulos - (modules)</h2>
+        <p>Conceitos de módulos.</p>
+
+        <div ng-app="meuApp" > <!--  ng-app é onde coloco o nome da minha aplicação .  -->
+            <!-- dentro desses módulos é que criamos nossa aplicação e associamos 
+                 esse nome do módulo criado com o nome da aplicação. -->
+        </div>
+
+        <script type="text/javascript">
+        var app = angular.module("meuApp", []);
+        </script>
+        <!-- esse script estabelece a associação do nome da
+             aplicação com o nome do módulo -->
+    </body>
+</html>
