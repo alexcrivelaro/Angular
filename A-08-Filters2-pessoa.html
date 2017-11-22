@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Filters - filtros</title>
+        <script type="text/javascript" src="angular.min.js"></script>
+        <style>
+            p, h1, h2, h3 {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            body {
+                background-color: #d2f0cd;
+            }
+        </style>
+    </head>
+    <body ng-app="meuApp" ng-controller="meuCtrl">
+        <h1>Página do curso de AngularJS.</h1>
+        <h2>Filters - filtros</h2>
+        <h3>Conceitos de Filters - filtros.</h3>
+        
+        <h2>Lista de pessoas</h2> 
+        Filtrar pessoas por: <input type="text" ng-model="filtrarPor">
+
+        <ul>
+            <li ng-repeat="pessoa in nomes | filter:filtrarPor">
+                {{pessoa}}
+            </li>
+        </ul>
+
+        <script type="text/javascript">
+        var app = angular.module('meuApp', []);
+        app.controller('meuCtrl', function($scope){
+            
+            $scope.nomes = ["Alexandre", "Maria", "Leandro", "Vinícius", "Alberto", "Beatriz", "Carlos", "Donizete", "Flávio"];
+
+        });
+        </script>
+
+
+
+    </body>
+</html>
