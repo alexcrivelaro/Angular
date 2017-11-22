@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Diretivas (directives)</title>
+        <script type="text/javascript" src="angular.min.js"></script>
+        <style>
+            p, h1, h2, h3 {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            body {
+                background-color: #d2f0cd;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Página do curso de AngularJS.</h1>
+        <h2>Diretivas (directives)</h2>
+        <h3>Conceitos de diretivas.</h3>
+        <br>
+        <p>Toda diretiva no angular começa com ng- .</p>
+        <p>Exemplo: ng-app, ng-model e ng-bind.</p>
+        <p>Tudo o que é feito no html é feito através de expressões ou diretivas.</p>
+        <p>Diretivas usa-se ng- e expressões {{ }}.</p>
+        <br>
+        <div ng-app="">
+            Nome: <input type="text" ng-model="nome" > <p ng-bind="nome"></p> 
+        </div>
+    </body>
+</html>
